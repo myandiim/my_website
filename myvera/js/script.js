@@ -98,8 +98,9 @@ if (hizmetlerItem) {
     }
   });
 }
-  const hero = document.getElementById("hero");
+const hero = document.getElementById("hero");
 
+if (hero) {
   const images = [
     "images/hero1.jpg",
     "images/hero2.jpg",
@@ -118,4 +119,5 @@ if (hizmetlerItem) {
 
   // Tıklanınca arka plan değiştir
   hero.addEventListener("click", changeBackground);
+}
 
