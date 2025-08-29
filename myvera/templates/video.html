@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Editörlük - Myvera Soft</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+  <header class="header">
+  <div class="container">
+    <h1 class="logo">
+      <a href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Myvera Soft Logo" class="logo-img" />
+        Myvera Soft
+      </a>
+    </h1>
+
+    <!-- Hamburger buton -->
+    <button class="menu-toggle" aria-label="Menüyü aç/kapat">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="{{ url_for('index') }}#hero">Anasayfa</a></li>
+        <li><a href="{{ url_for('index') }}#hakkimizda">Hakkımızda</a></li>
+
+        <!-- Hizmetler menüsü alt başlıklı -->
+        <li class="dropdown">
+          <a href="{{ url_for('index') }}#hizmetler">Hizmetler</a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ url_for('index') }}#hizmetler">Hizmetlerimiz</a></li>
+            <li><a href="{{ url_for('mobil') }}">Mobil Uygulama Geliştirme</a></li>
+            <li><a href="{{ url_for('video') }}">Video Editörlük</a></li>
+            <li><a href="#">Web Site Geliştirme</a></li>
+            <li><a href="#">Sosyal Medya Yöneticiliği</a></li>
+          </ul>
+        </li>
+
+        <li><a href="{{ url_for('index') }}#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Video Editörlüğü</h2>
+        <p>Myvera Soft olarak, uzman kadromuz ile tanıtım filmleri çekip editliyoruz aynı zamanda youtube gibi platformlarda içerik üreticilerine video editörlüğü hizmetinde bulunuyoruz</p>
+        <p>Kendimizi sürekli güncelleyerek, sizlere özgün içerik imkanı sunuyoruz.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Myvera Soft. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Hizmet Formu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>{{ 'Hizmet Düzenle' if service else 'Yeni Hizmet' }}</h2>
+    <form method="post">
+      <label>Başlık:</label><br>
+      <input type="text" name="title" value="{{ service.title if service else '' }}"><br>
+      <label>Açıklama:</label><br>
+      <input type="text" name="description" value="{{ service.description if service else '' }}"><br>
+      <label>Bağlantı:</label><br>
+      <input type="text" name="link" value="{{ service.link if service else '' }}"><br><br>
+      <button type="submit">Kaydet</button>
+    </form>
+  </div>
+</body>
+</html>
